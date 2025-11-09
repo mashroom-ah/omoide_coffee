@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Занятие 15: Корректный viewport для адаптивности -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Omoide coffee - Кофе, который объединяет</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    <header class="header">
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/logo.png" alt="Omoide coffee logo" class="logo-icon">
+                    Omoide coffee
+                </a>
+
+                <button class="nav-toggle" area-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link" aria-current="page">Главная</a></li>
+                        <li><a href="menu.html" class="nav-link">Меню</a></li>
+                        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+                        <li><a href="franchise.html" class="nav-link">Франшиза</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" class="main">
+        <sectoin class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Кофе, который объединяет</h1>
+                <p class="hero-subtitle">В каждой чашке — история тщательного отбора, мастерской обжарки и тёплых
+                    воспоминаний</p>
+                <div class="hero-actions">
+                    <a href="menu.html" class="btn btn-primary">Посмотреть меню</a>
+                    <a href="#about" class="btn btn-secondary">Узнать о нас</a>
+                </div>
+            </div>
+        </sectoin>
+
+        <section class="popular section">
+            <div class="container">
+                <h2 class="section-title">Сезонные новинки</h2>
+                <p class="section-subtitle">Необычные вкусы для каждого времени года</p>
+                <!--Занятие 15: Адаптивная grid-сетка с auto-fit и minmax-->
+                <div class="products-grid" id="products-container">
+                    <article class="product-card">
+                        <div class="product-image">
+                            <picture>
+                                <source srcset="assets/pink-flame.webp" type="image/webp">
+                                <source srcset="assets/pink-flame.jpg" type="image/jpeg">
+                                <img src="assets/pink-flame.jpg" alt="Pink Flame инжир" loading="lazy"
+                                    class="product-img">
+                            </picture>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Pink Flame</h3>
+                            <p class="product-description">Мягкий кофейный напиток со сладостью инжира и нежностью
+                                клубники, дополненный лёгкой пряностью розового перца</p>
+                            <div class="product-price">280 ₽</div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <picture>
+                                <source srcset="assets/red-rush.webp" type="image/webp">
+                                <source srcset="assets/red-rush.jpg" type="image/jpeg">
+                                <img src="assets/red-rush.jpg" alt="Red Rush бамбл" loading="lazy" class="product-img">
+                            </picture>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Red Rush</h3>
+                            <p class="product-description">Яркий гранатовый бамбл с цитрусовой свежестью грейпфрута и
+                                мягкой нитро-пеной</p>
+                            <div class="product-price">300 ₽</div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <picture>
+                                <source srcset="assets/velvet-green.webp" type="image/webp">
+                                <source srcset="assets/velvet-green.jpg" type="image/jpeg">
+                                <img src="assets/velvet-green.jpg" alt="VelvetGreen какао" loading="lazy"
+                                    class="product-img">
+                            </picture>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Velvet Green</h3>
+                            <p class="product-description">Нежный молочный напиток с ароматным какао, сливочной
+                                фисташковой пастой и яркой ноткой матчи</p>
+                            <div class="product-price">350 ₽</div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image">
+                            <picture>
+                                <source srcset="assets/noir-bloom.webp" type="image/webp">
+                                <source srcset="assets/noir-bloom.jpg" type="image/jpeg">
+                                <img src="assets/noir-bloom.jpg" alt="Noir Bloom чай" loading="lazy"
+                                    class="product-img">
+                            </picture>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-title">Noir Bloom</h3>
+                            <p class="product-description">Насыщенный чёрный чай с яркой кислинкой чёрной смородины в
+                                сочетании с мёдом юдзу, лаймом и свежестью тархуна</p>
+                            <div class="product-price">260 ₽</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!--Advantages-->
+        <section class="advantages section">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-icon" aria-hidden="true">
+                            <img src="assets/eco-icon.svg" alt="" loading="lazy">
+                        </div>
+                        <h3 class="advantage-title">Экологичность</h3>
+                        <p class="advantage-text">Используем биоразлагаемые стаканы и упаковку. Сортируем отходы и
+                            поддерживаем местных фермеров</p>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon" aria-hidden="true">
+                            <img src="assets/coffee-icon.svg" alt="" loading="lazy">
+                        </div>
+                        <h3 class="advantage-title">Качество зёрен</h3>
+                        <p class="advantage-text">Работаем напрямую с плантациями. Каждая партия проходит строгий
+                            контроль качества перед обжаркой</p>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon" aria-hidden="true">
+                            <img src="assets/barista-icon.svg" alt="" loading="lazy">
+                        </div>
+                        <h3 class="advantage-title">Мастерство бариста</h3>
+                        <p class="advantage-text">Наши специалисты регулярно повышают квалификацию и учавствуют в
+                            российских чемпионатах</p>
+                    </div>
+
+                    <div class="advantage-card">
+                        <div class="advantage-icon" aria-hidden="true">
+                            <img src="assets/special-icon.svg" alt="" loading="lazy">
+                        </div>
+                        <h3 class="advantage-title">Особый подход</h3>
+                        <p class="advantage-text">Предлагаем персональные напитки на основе истории заказов</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="review section">
+            <div class="container">
+                <h2 class="section-title">Отзывы гостей</h2>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-image">
+                                <picture>
+                                    <source srcset="assets/nataly.webp" type="image/webp">
+                                    <source srcset="assets/nataly.jpeg" type="image/jpeg">
+                                    <img src="assets/nataly.jpeg" alt="Nataly" loading="lazy" class="review-image">
+                                </picture>
+                            </div>
+
+                            <div class="reviewer-info">
+                                <h3 class="reviewer-name">Сара Вейн</h3>
+                                <div class="rating">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">Впервые попробовала раф-кофе именно здесь и влюбилась! Нежный, сливочный,
+                            с идеальным балансом вкуса. Теперь это мой must-have. Обожаю сезонные предложения! Noir
+                            Bloom - нечто особенное. Всегда с нетерпением жду новых вкусов.</p>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-image">
+                                <picture>
+                                    <source srcset="assets/nataly.webp" type="image/webp">
+                                    <source srcset="assets/nataly.jpeg" type="image/jpeg">
+                                    <img src="assets/nataly.jpeg" alt="Nataly" loading="lazy" class="review-image">
+                                </picture>
+                            </div>
+
+                            <div class="reviewer-info">
+                                <h3 class="reviewer-name">Натали Вега</h3>
+                                <div class="rating">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">Лучший капучино в городе! Всегда идеальная пенка и прекрасная атмосфера
+                            для работы</p>
+                    </div>
+
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-image">
+                                <picture>
+                                    <source srcset="assets/nataly.webp" type="image/webp">
+                                    <source srcset="assets/nataly.jpeg" type="image/jpeg">
+                                    <img src="assets/nataly.jpeg" alt="Nataly" loading="lazy" class="review-image">
+                                </picture>
+                            </div>
+
+                            <div class="reviewer-info">
+                                <h3 class="reviewer-name">Ноа Себастьян</h3>
+                                <div class="rating">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                    <img src="assets/rating.svg">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="review-text">Люблю приходить сюда с книгой по выходным. Тихая музыка, приглушенный
+                            свет и аромат свежеобжаренных зерен - что может быть лучше?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="map section">
+            <div class="container">
+                <h2 class="section-title">Мы ждём вас</h2>
+                <p class="section-subtitle">Приходите за вкусным кофе, умиротворяющей атмосферой и тёплыми
+                    воспоминаниями</p>
+
+                <div class="map-content">
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.546951803964!2d37.8029373761549!3d55.80110438827054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b534cbcc189a77%3A0xac319c1f5177c43d!2zMTEt0Y8g0J_QsNGA0LrQvtCy0LDRjyDRg9C7LiwgMzYsINCc0L7RgdC60LLQsCwgMTA1MDc3!5e0!3m2!1sru!2sru!4v1762629744208!5m2!1sru!2sru"
+                            width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+
+                    <div class="map-info">
+                        <h3 class="map-title">Адрес</h3>
+                        <p class="map-text">г. Москва, ул. 11-я Парковая, д.36</p>
+
+                        <h3 class="map-title">Часы работы</h3>
+                        <p class="map-text">Пн-Пт: 5:00-22:00<br>Сб-Вс: 8:00-23:00</p>
+
+                        <h3 class="map-title">Телефон</h3>
+                        <p class="map-text">+7 (999) 999 99 99</p>
+
+                        <h3 class="map-title">Посетителям с питомцами бесплатная вкусняшка для пушистого друга!</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="upper-footer">
+                <div class="footer-content">
+                    <a href="index.html" class="footer-logo">
+                        <img src="assets/logo.png" alt="Omoide coffee logo" class="logo-icon">
+                        Omoide coffee
+                    </a>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <img src="assets/instagram-icon.svg" alt="" loading="lazy">
+                        </a>
+                        <a href="#" class="social-link" aria-label="VK">
+                            <img src="assets/vk-icon.svg" alt="" loading="lazy">
+                        </a>
+                        <a href="#" class="social-link" aria-label="Telegram">
+                            <img src="assets/telegram-icon.svg" alt="" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <nav aria-label="Дополнительная навигация">
+                        <ul class="footer-links">
+                            <li><a href="index.html" class="footer-link">Главная</a></li>
+                            <li><a href="menu.html" class="footer-link">Меню</a></li>
+                            <li><a href="contacts.html" class="footer-link">Контакты</a></li>
+                            <li><a href="franchise.html" class="footer-link">Франшиза</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2024 Omoide coffee. Все права защищены.</p>
+                <p class="made-with">Сделано с <span aria-hidden="true">❤️</span> и <span aria-hidden="true">☕</span>
+                </p>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
