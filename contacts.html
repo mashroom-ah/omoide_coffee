@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omoide coffee - Кофе, который объединяет</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
+    <header class="header">
+        <nav class="nav" aria-label="Основная навигация">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="assets/logo.png" alt="Omoide coffee logo" class="logo-icon">
+                    Omoide coffee
+                </a>
+
+                <button class="nav-toggle" area-expanded="false" aria-controls="nav-menu">
+                    <span class="hamburger"></span>
+                </button>
+
+                <div class="nav-menu" id="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Главная</a></li>
+                        <li><a href="menu.html" class="nav-link">Меню</a></li>
+                        <li><a href="contacts.html" class="nav-link" aria-current="page">Контакты</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main" class="main">
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1 class="contact-hero-title">Свяжитесь с нами</h1>
+                <p class="contact-hero-subtitle">Мы всегда рады новым гостям и готовы ответить на все ваши вопросы</p>
+            </div>
+        </section>
+
+        <section class="contacts">
+            <h2 class="section-title">Наши контакты:</h2>
+            <div class="contact-items">
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">
+                        <img src="assets/place-icon.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="contact-content">
+                        <h3>Адрес</h3>
+                        <p>г. Москва, ул. 11-я Парковая, д.36</p>
+                        <p class="contact-note">Метро: Первомайская (12 минут пешком)</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">
+                        <img src="assets/time-icon.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="contact-content">
+                        <h3>Часы работы</h3>
+                        <p>Пн-Пт: 5:00-22:00</p>
+                        <p>Сб-Вс: 8:00-23:00</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">
+                        <img src="assets/phone-icon.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="contact-content">
+                        <h3>Телефон</h3>
+                        <p>+7 (999) 999-99-99</p>
+                        <p class="contact-note">Звонки принимаем с 8:00 до 21:00</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon" aria-hidden="true">
+                        <img src="assets/mail-icon.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="contact-content">
+                        <h3>Email</h3>
+                        <p>hello@omoide-coffee.ru</p>
+                        <p class="contact-note">Отвечаем в течение 24 часов</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <h2 class="section-title">Остались вопросы? Напишите нам</h2>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Имя</label>
+                        <input type="text" id="name" name="name" required class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" id="email" name="email" required class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <input type="tel" id="phone" name="phone" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Тема</label>
+                        <select id="subject" name="subject" required class="form-select">
+                            <option value="">Выберите тему</option>
+                            <option value="reservation">Бронирование столика</option>
+                            <option value="feedback">Отзыв</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" class="form-label">Сообщение</label>
+                        <textarea id="message" name="message" rows="5" required class="form-textarea"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary form-submit">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="map-section section">
+            <div class="contact-map-container">
+                <h2 class="section-title">Мы на карте</h2>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2242.546951803964!2d37.8029373761549!3d55.80110438827054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b534cbcc189a77%3A0xac319c1f5177c43d!2zMTEt0Y8g0J_QsNGA0LrQvtCy0LDRjyDRg9C7LiwgMzYsINCc0L7RgdC60LLQsCwgMTA1MDc3!5e0!3m2!1sru!2sru!4v1762629744208!5m2!1sru!2sru"
+                        width="100%" height="400" style="border:0; border-radius: 12px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        title="Карта расположения кофейни Omoide coffee">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="upper-footer">
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">
+                    <img src="assets/logo.png" alt="Omoide coffee logo" class="logo-icon">
+                    Omoide coffee
+                </a>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="assets/instagram-icon.svg" alt="" loading="lazy">
+                    </a>
+                    <a href="#" class="social-link" aria-label="VK">
+                        <img src="assets/vk-icon.svg" alt="" loading="lazy">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Telegram">
+                        <img src="assets/telegram-icon.svg" alt="" loading="lazy">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3 class="footer-title">Навигация</h3>
+                <nav aria-label="Дополнительная навигация">
+                    <ul class="footer-links">
+                        <li><a href="index.html" class="footer-link">Главная</a></li>
+                        <li><a href="menu.html" class="footer-link">Меню</a></li>
+                        <li><a href="contacts.html" class="footer-link">Контакты</a></li>
+                        <li><a href="franchise.html" class="footer-link">Франшиза</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2024 Omoide coffee. Все права защищены.</p>
+            <p class="made-with">Сделано с <span aria-hidden="true">❤️</span> и <span aria-hidden="true">☕</span>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

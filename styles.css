@@ -3,7 +3,7 @@
     --color-green: #56483b;
     --color-red: #b23030;
     --color-black: #060702;
-    --color-gray: #2c2c2c;
+    --color-gray: #252525;
 }
 
 /* Базовые стили */
@@ -91,7 +91,8 @@ a {
     cursor: pointer;
     flex-direction: column;
     justify-content: center;
-    width: 44px; /* Занятие 15: Минимальная touch-зона */
+    width: 44px;
+    /* Занятие 15: Минимальная touch-зона */
     height: 44px;
     padding: 10px;
 }
@@ -142,17 +143,21 @@ a {
 /* Адаптив */
 @media (max-width: 768px) {
     .nav-container {
-        padding: 0.75rem 1rem; /* Уменьшаем отступы по бокам */
+        padding: 0.75rem 1rem;
+        /* Уменьшаем отступы по бокам */
     }
 
     .nav-toggle {
         display: flex;
-        order: 2; /* Кнопка справа */
+        order: 2;
+        /* Кнопка справа */
     }
 
     .nav-logo {
-        order: 1; /* Логотип слева */
-        flex: 1; /* Занимает доступное пространство */
+        order: 1;
+        /* Логотип слева */
+        flex: 1;
+        /* Занимает доступное пространство */
     }
 
     .nav-menu {
@@ -171,16 +176,21 @@ a {
 
     .nav-list {
         flex-direction: column;
-        align-items: flex-start; /* Выравнивание по левому краю */
+        align-items: flex-start;
+        /* Выравнивание по левому краю */
         gap: 0;
-        padding: 0.5rem 1rem; /* Уменьшаем отступы внутри меню */
-        margin-left: 0.5rem; /* Сдвигаем весь список левее */
+        padding: 0.5rem 1rem;
+        /* Уменьшаем отступы внутри меню */
+        margin-left: 0.5rem;
+        /* Сдвигаем весь список левее */
     }
 
     .nav-link {
-        justify-content: flex-start; /* Текст прижимается к левому краю */
+        justify-content: flex-start;
+        /* Текст прижимается к левому краю */
         padding: 1rem 0.75rem;
-        width: calc(100% - 1rem); /* Ширина с учетом отступа */
+        width: calc(100% - 1rem);
+        /* Ширина с учетом отступа */
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
@@ -205,7 +215,8 @@ a {
     }
 
     .nav-list {
-        margin-left: 0.75rem; /* Больше сдвиг на очень маленьких экранах */
+        margin-left: 0.75rem;
+        /* Больше сдвиг на очень маленьких экранах */
     }
 
     .nav-link {
@@ -244,8 +255,8 @@ a {
 
 /*HERO*/
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), 
-            url('assets/hero-bg.jpg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+        url('assets/hero-bg.jpg') center/cover no-repeat;
     min-height: 550px;
     display: flex;
     align-items: center;
@@ -488,11 +499,12 @@ a {
 
 /* Занятие 15: Поддержка prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
+
     .product-card,
     .product-img {
         transition: none;
     }
-    
+
     .product-card:hover {
         transform: none;
     }
@@ -527,10 +539,9 @@ a {
 .advantage-card:hover {
     transform: translateY(-5px);
     /* Усиление градиента при наведении */
-    background: linear-gradient(135deg, 
-        color-mix(in srgb, var(--color-green) 90%, black),
-        color-mix(in srgb, var(--color-red) 90%, black)
-    );
+    background: linear-gradient(135deg,
+            color-mix(in srgb, var(--color-green) 90%, black),
+            color-mix(in srgb, var(--color-red) 90%, black));
 }
 
 .advantage-icon {
@@ -543,7 +554,8 @@ a {
     height: 64px;
     object-fit: contain;
     /* Занятие 16: Фильтр для цвета иконок */
-    filter: brightness(0) invert(1); /* Делает иконки белыми */
+    filter: brightness(0) invert(1);
+    /* Делает иконки белыми */
 }
 
 /* Адаптивность */
@@ -551,16 +563,16 @@ a {
     .advantages {
         padding: 2rem 0;
     }
-    
+
     .advantages-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .advantage-card {
         padding: 1.5rem 1rem;
     }
-    
+
     /* Занятие 16: Меньшие иконки на мобильных */
     .advantage-icon img {
         width: 48px;
@@ -573,7 +585,7 @@ a {
     .advantage-card {
         transition: none;
     }
-    
+
     .advantage-card:hover {
         transform: none;
     }
@@ -616,7 +628,8 @@ a {
 }
 
 .review-image {
-    flex-shrink: 0; /*Не дает сжиматься*/
+    flex-shrink: 0;
+    /*Не дает сжиматься*/
 }
 
 .review-image img {
@@ -636,20 +649,20 @@ a {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
-    
+
     .review-card {
         padding: 1.25rem;
         margin: 0 auto;
         width: 90%;
     }
-    
+
     .review-header {
         flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 0.75rem;
     }
-    
+
     .review-image img {
         width: 70px;
         height: 70px;
@@ -660,12 +673,12 @@ a {
     .reviews-grid {
         gap: 1rem;
     }
-    
+
     .review-card {
         padding: 1rem;
         max-width: 90%;
     }
-    
+
     .review-image img {
         width: 60px;
         height: 60px;
@@ -719,16 +732,16 @@ a {
         gap: 2rem;
         grid-template-areas: "info" "map";
     }
-    
+
     .map {
         padding: 2rem 0;
     }
-    
+
     .map-container {
         grid-area: map;
         height: 300px;
     }
-    
+
     .map-info {
         grid-area: info;
         padding: 1.25rem;
@@ -739,7 +752,7 @@ a {
     .map-container {
         height: 250px;
     }
-    
+
     .map-item {
         padding: 1rem;
     }
@@ -752,7 +765,7 @@ a {
     padding: clamp(1rem, 2vw, 1.5rem) 0 0.5rem;
 }
 
-.upper-footer{
+.upper-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -869,11 +882,12 @@ a {
 
 /* Занятие 15: Поддержка prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
+
     .social-link,
     .footer-link {
         transition: none;
     }
-    
+
     .social-link:hover {
         transform: none;
     }
@@ -887,22 +901,22 @@ a {
         gap: 2rem;
         text-align: center;
     }
-    
+
     .footer-content {
         margin-left: 0;
         justify-items: center;
     }
-    
+
     .footer-section {
         margin-right: 0;
         align-items: center;
     }
-    
+
     .footer-links {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .footer-bottom {
         flex-direction: column;
         gap: 0.5rem;
@@ -914,19 +928,405 @@ a {
     .footer-content {
         grid-template-columns: 1fr;
     }
-    
+
     .social-links {
         gap: 0.5rem;
     }
-    
+
     .social-link {
         width: 36px;
         height: 36px;
     }
-    
+
     .social-link img {
         width: 18px;
         height: 18px;
     }
 }
 
+/*contacts*/
+
+/*contacts*/
+.contact-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+        url('assets/hero-contact.jpg') center/cover no-repeat;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem;
+    color: var(--color-beige);
+    border-radius: 16px;
+    overflow: hidden;
+
+    /* Ограничиваем ширину */
+    width: 90%;
+    max-width: 950px;
+    margin: 2rem auto;
+}
+
+.contact-hero-content {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contact-hero-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .contact-hero {
+        width: 90%;
+        min-height: 250px;
+        margin: 1rem auto;
+        padding: 1.5rem 1rem;
+        border-radius: 12px;
+    }
+
+    .contact-hero-title {
+        font-size: 1.75rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-hero-subtitle {
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        width: 90%;
+        min-height: 150px;
+        margin: 0.5rem auto;
+        padding: 1rem 0.75rem;
+        border-radius: 10px;
+    }
+
+    .contact-hero-title {
+        font-size: 1.5rem;
+    }
+
+    .contact-hero-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+.contacts {
+    margin: 3rem 2rem;
+}
+
+/* Contact Items */
+.contact-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 колонки на компьютерах и планшетах */
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: var(--color-green);
+    border-radius: 50%;
+}
+
+.contact-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.contact-content {
+    flex: 1;
+}
+
+.contact-content h3 {
+    margin: 0 0 0.75rem 0;
+    color: var(--color-green);
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+.contact-content p {
+    margin: 0.5rem 0;
+    color: var(--color-green);
+    line-height: 1.4;
+}
+
+.contact-content strong {
+    color: var(--color-gray);
+}
+
+.contact-note {
+    font-size: 0.875rem;
+    opacity: 0.7;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contact-items {
+        grid-template-columns: 1fr;
+        /* 1 колонка на телефонах */
+        gap: 1rem;
+    }
+
+    .contact-item {
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .contact-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .contact-content h3 {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Contact Form Container */
+.contact-form-container {
+    max-width: clamp(500px, 60vw, 800px);
+    margin: 0 auto;
+    /* Центрирование */
+}
+
+.contact-form-container .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-green);
+    font-size: 1.75rem;
+}
+
+/* Сама форма с фоном */
+.contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--color-green);
+    font-size: 0.95rem;
+}
+
+.form-label::after {
+    content: " *";
+    color: var(--color-red);
+}
+
+/* Убираем звёздочку у необязательных полей */
+.form-group:not(:has([required])) .form-label::after {
+    content: "";
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--color-beige);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: white;
+    color: var(--color-green);
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--color-green);
+    box-shadow: 0 0 0 3px rgba(91, 89, 74, 0.1);
+}
+
+.form-input::placeholder {
+    color: var(--color-green);
+    opacity: 0.5;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.5;
+}
+
+.form-submit {
+    margin-top: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    width: 100%;
+    color: white;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contact-form-container {
+        max-width: 100%;
+        /* На планшете занимает всю ширину */
+        padding: 0 1rem;
+        /* Небольшие отступы по бокам */
+    }
+
+    .contact-form {
+        padding: 2rem;
+    }
+
+    .contact-form-container .section-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-form-container {
+        padding: 0 0.75rem;
+        /* Меньшие отступы на телефоне */
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-form-container .section-title {
+        font-size: 1.375rem;
+    }
+}
+
+/* Занятие 15: Поддержка prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .form-input,
+    .form-select,
+    .form-textarea,
+    .form-submit {
+        transition: none;
+    }
+
+    .form-submit:hover {
+        transform: none;
+    }
+
+    .form-submit:active {
+        transform: none;
+    }
+}
+
+.contact-map-container {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+/* Table Styles */
+
+.menu {
+    max-width: clamp(500px, 60vw, 800px);
+    margin: 4rem auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+th, td {
+    padding: 1rem 1.5rem; /* Увеличил отступы */
+    text-align: left;
+    border: none;
+}
+
+th {
+    background: var(--color-green);
+    color: var(--color-beige);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.menu-section {
+    margin-bottom: 4rem; /* Больше воздуха между разделами */
+    text-align: start;
+}
+
+.menu-section h3 {
+    color: var(--color-green);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem; /* Больше отступ от заголовка */
+    padding-left: 0;
+    border-left: none;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    th, td {
+        padding: 0.75rem 1rem; /* Сохраняем отступы на мобильных */
+    }
+    
+    .menu-section {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    th, td {
+        padding: 0.6rem 0.8rem;
+    }
+}
