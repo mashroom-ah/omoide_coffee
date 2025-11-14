@@ -14,11 +14,11 @@
         <nav class="nav" aria-label="Основная навигация">
             <div class="nav-container">
                 <a href="index.html" class="nav-logo">
-                    <img src="assets/logo.png" alt="Omoide coffee logo" class="logo-icon">
+                    <img src="assets/logo.png" srcset="assets/logo.png 1x, assets/logo@2x.png 2x" alt="Omoide coffee logo" class="logo-icon">
                     Omoide coffee
                 </a>
 
-                <button class="nav-toggle" area-expanded="false" aria-controls="nav-menu">
+                <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
                     <span class="hamburger"></span>
                 </button>
 
@@ -34,7 +34,7 @@
     </header>
 
     <main id="main" class="main">
-        <sectoin class="hero">
+        <section class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">Кофе, который объединяет</h1>
                 <p class="hero-subtitle">В каждой чашке — история тщательного отбора, мастерской обжарки и тёплых
@@ -44,7 +44,7 @@
                     <a href="#about" class="btn btn-secondary">Узнать о нас</a>
                 </div>
             </div>
-        </sectoin>
+        </section>
 
         <section class="popular section">
             <div class="container">
@@ -56,7 +56,8 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="assets/pink-flame.webp" type="image/webp">
-                                <source srcset="assets/pink-flame.jpg" type="image/jpeg">
+                                <source media="(min-width: 1200px)" srcset="assets/pink-flame-big.jpg" type="image/jpeg">
+                                <source media="(min-width: 768px)" srcset="assets/pink-flame-medium.jpg" type="image/jpeg">
                                 <img src="assets/pink-flame.jpg" alt="Pink Flame инжир" loading="lazy"
                                     class="product-img">
                             </picture>
@@ -73,7 +74,8 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="assets/red-rush.webp" type="image/webp">
-                                <source srcset="assets/red-rush.jpg" type="image/jpeg">
+                                <source media="(min-width: 1200px)" srcset="assets/red-rush-big.jpg" type="image/jpeg">
+                                <source media="(min-width: 768px)" srcset="assets/red-rush-medium.jpg" type="image/jpeg">
                                 <img src="assets/red-rush.jpg" alt="Red Rush бамбл" loading="lazy" class="product-img">
                             </picture>
                         </div>
@@ -89,7 +91,8 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="assets/velvet-green.webp" type="image/webp">
-                                <source srcset="assets/velvet-green.jpg" type="image/jpeg">
+                                <source media="(min-width: 1200px)" srcset="assets/velvet-green-big.jpg" type="image/jpeg">
+                                <source media="(min-width: 768px)" srcset="assets/velvet-green-medium.jpg" type="image/jpeg">
                                 <img src="assets/velvet-green.jpg" alt="VelvetGreen какао" loading="lazy"
                                     class="product-img">
                             </picture>
@@ -106,7 +109,8 @@
                         <div class="product-image">
                             <picture>
                                 <source srcset="assets/noir-bloom.webp" type="image/webp">
-                                <source srcset="assets/noir-bloom.jpg" type="image/jpeg">
+                                <source media="(min-width: 1200px)" srcset="assets/noir-bloom-big.jpg" type="image/jpeg">
+                                <source media="(min-width: 768px)" srcset="assets/noir-bloom-medium.jpg" type="image/jpeg">
                                 <img src="assets/noir-bloom.jpg" alt="Noir Bloom чай" loading="lazy"
                                     class="product-img">
                             </picture>
@@ -284,7 +288,7 @@
             <div class="upper-footer">
                 <div class="footer-content">
                     <a href="index.html" class="footer-logo">
-                        <img src="assets/logo.png" alt="Omoide coffee logo" class="logo-icon">
+                        <img src="assets/logo.png" srcset="assets/logo.png 1x, assets/logo@2x.png 2x" alt="Omoide coffee logo" class="logo-icon">
                         Omoide coffee
                     </a>
                     <div class="social-links">
